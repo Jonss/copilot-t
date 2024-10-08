@@ -8,7 +8,9 @@ function Index() {
     const [hasError, setHasError] = useState<boolean>(false)
 
     useEffect(() => {
-        fetchPokemon().then(resp => resp.json()).then(r => setPokemon(r.results)).catch(() => setHasError(true));
+        fetchPokemon().then(resp => resp.json())
+        .then(r => setPokemon(r.results))
+        .catch(() => setHasError(true));
     }, []);
 
     if(hasError) {
