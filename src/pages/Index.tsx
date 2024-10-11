@@ -1,3 +1,4 @@
+import React from 'react';
 import { useEffect, useState } from 'react';
 import { PokeTable } from '../components/PokeTable';
 import { Loading } from '../components/ui/Loading';

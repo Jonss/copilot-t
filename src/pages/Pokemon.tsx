@@ -1,3 +1,4 @@
+import React from 'react';
 import { redirect, useParams } from 'react-router-dom';
 import { useFetchSinglePokemon } from '../hooks/useFetchSinglePokemon';
 import { PokeCard } from '../components/PokeCard';
