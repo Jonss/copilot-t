@@ -17,7 +17,7 @@ export const PokeCard: FC<Props> = ({ pokemon }) => {
     <div className="rounded bg-white md:mx-24 pt-0 border rounded-lg shadow-xl">
       <PokeCardHeader name={name} id={id} types={types} />
       <PokeTypes types={types} />
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-0 md:gap-4 md:p-8 p-4">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-0 md:gap-4 p-4">
         <div
           className={`border border-${type} rounded-lg col-span-1 mb-4 md:mb-0`}
         >

@@ -19,7 +19,7 @@ export const PokeCarousel: FC<Props> = ({ type, images }) => {
   if (!images.length) return null;
 
   return (
-    <div className={`w-full`} style={{ background: bgColor }}>
+    <div className={`w-full rounded`} style={{ background: bgColor }}>
       <Carousel arrowColor="#000">
         {images.map((v) => (
           <div

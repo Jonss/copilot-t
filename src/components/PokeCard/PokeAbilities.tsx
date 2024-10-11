@@ -13,9 +13,9 @@ type Props = {
 
 export const PokeAbilities: FC<Props> = ({ type, abilities }) => {
   return (
-    <div className="w-full">
+    <div className="w-full rounded">
       <table
-        className={`border-collapse border border-${type}/80 w-full border-spacing-2 table-auto`}
+        className={`border-collapse border border-separated border-${type}/80 w-full border-spacing-2 table-auto`}
       >
         <thead>
           <tr className="">
