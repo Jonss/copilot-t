@@ -1,14 +1,14 @@
 import { FC } from "react";
 import { Link } from "react-router-dom";
 import { toCapital } from "../utils/stringUtils";
-
+import { DisplayPokemon } from "../types/pokemon";
 
 type Props = {
-    name: string;
-    url: string;
+   pokemon: DisplayPokemon;
 }
 
-export const PokeRow: FC<Props> = ({ name, url }) => {
+export const PokeRow: FC<Props> = ({ pokemon }) => {
+    const { name, url} = pokemon;
     return (
         <tr key={name} className="p-2">
             <td className="border border-slate-300">

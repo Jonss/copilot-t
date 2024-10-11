@@ -1,21 +1,17 @@
-import { useEffect, useState } from "react";
-import { fetchPokemon } from "../service/pokeapi.service";
 import { PokeTable } from "../components/PokeTable";
+import { Loading } from "../components/ui/Loading";
+import { useFetchPokemon } from "../hooks/useFetchPokemon";
+import NotFound from "./404";
 
 function Index() {
+    const {
+        data: pokemon,
+        error, 
+        isLoading, 
+    } = useFetchPokemon({ limit: 10, offset: 0});
 
-    const [pokemon, setPokemon] = useState([]);
-    const [hasError, setHasError] = useState<boolean>(false)
-
-    useEffect(() => {
-        fetchPokemon().then(resp => resp.json())
-        .then(r => setPokemon(r.results))
-        .catch(() => setHasError(true));
-    }, []);
-
-    if(hasError) {
-        return <div className="h-screen justify-center align-center">Not found</div>
-    }
+    if(error) return <NotFound />
+    if(isLoading) return <Loading />
 
     return <PokeTable pokemon={pokemon} />
 }
