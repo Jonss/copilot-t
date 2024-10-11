@@ -14,7 +14,7 @@ You can run it locally.
 - Install the dependencies: `npm i` 
 - Run the app: `npm run dev`.
 
-You can also run on the server using [this link](https://copilot-t-97ie.vercel.app/).
+You can also run on the server using [this link](https://copilot-t.vercel.app).
 
 
 ## Tasks
