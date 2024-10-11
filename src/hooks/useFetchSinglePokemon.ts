@@ -1,7 +1,8 @@
 import { useQuery } from "@tanstack/react-query";
 import { ONE_MINUTE } from "../utils/consts";
 import { fetchSinglePokemon } from "../service/pokeapi.service";
-import { PokemonDetails, parseJsonToPokemonDetails } from "../types/pokemon";
+import { PokemonDetails } from "../types/pokemon";
+import { parseJsonToPokemonDetails } from "../types/parsers/pokemonParser";
 
 export const useFetchSinglePokemon = (name: string) => {
     const { data, isLoading, error } = useQuery<PokemonDetails>({
@@ -23,5 +24,4 @@ export const useFetchSinglePokemon = (name: string) => {
         isLoading,
         error,
     }
-
 }

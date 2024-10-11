@@ -22,7 +22,7 @@ export const PokeAbilities: FC<Props> = ({ type, abilities }) => {
                 </thead>
                 <tbody>
                     {abilities.map(({name, isHidden}) => 
-                        <tr className="p-8">
+                        <tr className="p-8" key={name}>
                             <td key={name} className="border p-4">
                                 <span className="flex space-x-2 items-center">
                                     {typeIcons[type]}<span className={`text-${type}`}>
