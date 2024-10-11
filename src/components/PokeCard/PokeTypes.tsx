@@ -14,13 +14,15 @@ export const PokeTypes: FC<Props> = ({ types }) => {
       <h3 className="text-xl text-semibold">
         {types.length > 1 ? 'Types' : 'Type'}
       </h3>
-      {types.map((type) => (
-        <Badge
-          title={toCapital(type)}
-          bgColor={colorTypeToRgba(type, '1')}
-          key={type}
-        />
-      ))}
+      <div className='space-x-2'>
+        {types.map((type) => (
+          <Badge
+            title={toCapital(type)}
+            bgColor={colorTypeToRgba(type, '1')}
+            key={type}
+          />
+        ))}
+      </div>
     </div>
   );
 };
