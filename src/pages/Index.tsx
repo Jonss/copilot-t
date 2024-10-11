@@ -9,7 +9,6 @@ import { getNumberFromString } from "../utils/number";
 import { POKEMON_QTY } from "../utils/consts";
 import { PoketablePagination } from "../components/PokeTablePagination";
 
-
 function Index() {
 
     const navigate = useNavigate();

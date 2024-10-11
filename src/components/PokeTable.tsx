@@ -1,6 +1,7 @@
 import { FC } from "react";
 import { PokeRow } from "./PokeRow";
 import { DisplayPokemon } from "../types/pokemon";
+import { useFetchSinglePokemon } from "../hooks/useFetchSinglePokemon";
 
 
 type Props = {
