@@ -28,6 +28,9 @@ export default {
         dark: '#705746',
         steel: '#B7B7CE',
         fairy: '#D685AD',
+        'poke-red': "#CC0000",
+        'poke-blue': "#3B4CCA",
+        "poke-yellow": "#ffde00",
       }
     },
   },

@@ -8,13 +8,14 @@ type Props = {
 }
 
 export const PokeRow: FC<Props> = ({ pokemon }) => {
-    const { name, url} = pokemon;
+    const { name } = pokemon;
     return (
-        <tr key={name} className="p-2">
-            <td className="border border-slate-300">
-                <span className="text-xl">{toCapital(name)}</span>
+        <tr key={name} className="text-poke-blue hover:text-white">
+            <td className="border p-2 hover:bg-cyan-400 ">
+                <Link to={`/${name}`}>
+                    <span className="text-xl">{toCapital(name)}</span>
+                </Link>
             </td>
-            <td className="border border-slate-300"><Link to={url}>{url}</Link></td>
         </tr>
     );
 }

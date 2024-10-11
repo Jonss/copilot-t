@@ -25,7 +25,9 @@ export const PokeAbilities: FC<Props> = ({ type, abilities }) => {
                         <tr className="p-8">
                             <td key={name} className="border p-4">
                                 <span className="flex space-x-2 items-center">
-                                    {typeIcons[type]}<span className={`text-${type}`}>{toCapital(name, " ")} {isHidden && <span className="text-xs"> - Hidden ability</span>}</span>
+                                    {typeIcons[type]}<span className={`text-${type}`}>
+                                        {toCapital(name, " ")} {isHidden && <span className="text-xs"> - Hidden ability</span>}
+                                    </span>
                                 </span>
                             </td>
                         </tr>

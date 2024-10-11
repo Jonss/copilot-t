@@ -11,11 +11,10 @@ export const PokeTable: FC<Props> = ({ pokemon }) => {
     if(!pokemon) return null;
 
     return (
-        <table className="table-auto border border-collapse border-slate-300">
+        <table className="table-auto border w-full">
             <thead>
                 <tr>
-                    <th><span className="text-red-500">Name</span></th>
-                    <th>URL</th>
+                    <th><span className="text-poke-red">Name</span></th>
                 </tr>
             </thead>
             <tbody>
